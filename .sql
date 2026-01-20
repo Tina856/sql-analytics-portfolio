@@ -150,7 +150,7 @@ SELECT
 --Տարբեր grain-ներ օգտագործելիս նույն տվյալներից ստացվում են տարբեր եզրակացություններ
 
 
--- ## Creating Geographical Tables
+ ## Creating Geographical Tables
 -- Now we define the analytical data model that will be used throughout this module.
 -- The schema follows a normalized (3NF) design with a clear geographic hierarchy:
 -- Country → Region → City → Customer
