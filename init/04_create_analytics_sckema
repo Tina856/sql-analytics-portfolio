@@ -58,22 +58,22 @@ CREATE TABLE analytics.order_items (
 \echo 'Creating spatial tables'
 CREATE TABLE analytics.country_boundaries (
     country_id INT PRIMARY KEY REFERENCES analytics.countries(country_id),
-    geom       GEOMETRY(MultiPolygon, 4326)
+    geom GEOMETRY(MultiPolygon, 4326)
 );
 
 CREATE TABLE analytics.region_boundaries (
     region_id INT PRIMARY KEY REFERENCES analytics.regions(region_id),
-    geom      GEOMETRY(Polygon, 4326)
+    geom GEOMETRY(Polygon, 4326)
 );
 
 CREATE TABLE analytics.city_boundaries (
     city_id INT PRIMARY KEY REFERENCES analytics.cities(city_id),
-    geom    GEOMETRY(Polygon, 4326)
+    geom GEOMETRY(Polygon, 4326)
 );
 
 CREATE TABLE analytics.customer_locations (
     customer_id INT PRIMARY KEY REFERENCES analytics.customers(customer_id),
-    geom        GEOMETRY(Point, 4326)
+    geom GEOMETRY(Point, 4326)
 );
 
 

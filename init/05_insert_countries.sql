@@ -1,3 +1,5 @@
+
+
 -- Load core dimension tables from CSV files
 \echo 'Loading core dimension tables from CSVs'
 COPY analytics.countries
