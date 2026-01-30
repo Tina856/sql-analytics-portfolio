@@ -1,4 +1,50 @@
-                 Session 07: Data Analysis with SQL | Functions
+             Session 04:
+             homework
+SELECT 
+    -- category,
+    -- CEIL(total_sales/50)*50 AS sales_range,
+    
+    COUNT(transaction_id),
+    CASE
+        WHEN CEIL(total_sales/100)*100 = 100 THEN  'Super Low Value'
+        WHEN CEIL(total_sales/100)*100 = 200 THEN  'Low Value'
+        WHEN CEIL(total_sales/100)*100 = 300 THEN  'Mid Value'
+        WHEN CEIL(total_sales/100)*100 = 400 THEN  'High Value'
+        WHEN CEIL(total_sales/100)*100 >= 500 THEN  'Super High Value'
+        ELSE 'RED FLAG'
+    END Segment1,
+    
+    CASE
+        WHEN CEIL((discount*100)/10)*10 = 10 THEN  'Super High Value'
+        WHEN CEIL((discount*100)/10)*10 = 20 THEN  'High Value'
+        WHEN CEIL((discount*100)/10)*10 = 30 THEN  'Mid Value'
+        WHEN CEIL((discount*100)/10)*10 = 40 THEN  'Low Value'
+        WHEN CEIL((discount*100)/10)*10>= 50 THEN  'Super Low Value'
+        ELSE 'Super Low Value'
+    END Segment2,
+    CONCAT(CASE
+        WHEN CEIL(total_sales/100)*100 = 100 THEN  'Super Low Value'
+        WHEN CEIL(total_sales/100)*100 = 200 THEN  'Low Value'
+        WHEN CEIL(total_sales/100)*100 = 300 THEN  'Mid Value'
+        WHEN CEIL(total_sales/100)*100 = 400 THEN  'High Value'
+        WHEN CEIL(total_sales/100)*100 >= 500 THEN  'Super High Value'
+        ELSE 'RED FLAG'
+    END, ' & ',     CASE
+                WHEN CEIL((discount*100)/10)*10 = 10 THEN  'Super High Value'
+                WHEN CEIL((discount*100)/10)*10 = 20 THEN  'High Value'
+                WHEN CEIL((discount*100)/10)*10 = 30 THEN  'Mid Value'
+                WHEN CEIL((discount*100)/10)*10 = 40 THEN  'Low Value'
+                WHEN CEIL((discount*100)/10)*10>= 50 THEN  'Super Low Value'
+                ELSE 'Super Low Value'
+    END) as joined_segment
+FROM public.sales_analysis
+WHERE category = 'Electronics'
+GROUP BY Segment1, Segment2, joined_segment
+ORDER BY Segment1, Segment2   
+                
+                
+                
+             Session 07: Data Analysis with SQL | Functions
 
 -- homework
 
