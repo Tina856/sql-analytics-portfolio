@@ -136,10 +136,3 @@ IS NULL, IS NOT NULL
 Ինչպես են NULL-երը ազդում հաշվարկների վրա
 
 Ինչու COUNT(column) ≠ COUNT(*) երբ կան NULL-եր
-
-
-
-
-
-harc tal init um sales_analytics petqa indz te che
-

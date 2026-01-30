@@ -34,17 +34,3 @@ JOIN products AS p
     ON s.product_id = p.product_id
 LEFT JOIN employees AS e
     ON s.employee_id = e.employee_id;
-
-
--- Adding indexes
-    CREATE INDEX idx_sales_analysis_order_date
-    ON sales_analysis(order_date_date);
-
-CREATE INDEX idx_sales_analysis_year
-    ON sales_analysis(year);
-
-CREATE INDEX idx_sales_analysis_city
-    ON sales_analysis(city);
-
-CREATE INDEX idx_sales_analysis_category
-    ON sales_analysis(category);
