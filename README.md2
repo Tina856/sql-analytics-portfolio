@@ -1,0 +1,34 @@
+## Step 1 – Business Domain
+
+The project analyzes global AI-related job postings.
+
+Each record represents a job posting published by a company in a specific year and geographic location.
+
+The dataset includes country, region, and city information, which enables geography-based analysis of AI adoption, employment trends, and automation risk.
+
+
+## Step 2 – Identify Entities & Business Tables
+
+Based on the business domain, the dataset can be decomposed
+into the following core business entities:
+
+- **Job_Posting**  
+  Central fact table. Each record represents a single AI-related
+  job posting published by a company in a specific year and location.
+
+- **Company**  
+  Represents companies that publish job postings.
+  One company can have multiple job postings.
+
+- **Location**  
+  Represents the geographic location of a job posting,
+  including country, region, and city.
+  Enables geographic and spatial analysis.
+
+- **Time**  
+  Represents the temporal dimension of the job posting,
+  currently at the year level, enabling trend analysis over time.
+
+- **Job / AI Characteristics**  
+  Represents AI-related attributes such as job category,
+  automation risk, or skill classification.

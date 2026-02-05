@@ -332,3 +332,30 @@ FROM analytics.city_boundaries;
 
 
 SELECT * FROM analytics.country_boundaries;
+
+
+
+
+
+
+     -- homework
+-- Q1: Who are our customers and where are they located?
+SELECT 
+   customer_name, 
+   city
+FROM customers;
+
+
+-- Q2: Do we have customers who have never placed an order?
+SELECT 
+   c.customer_name
+FROM customers c
+LEFT JOIN sales s ON c.customer_id = s.customer_id
+WHERE s.order_id IS NULL;
+
+
+-- Q6: Are there customers without city ?
+SELECT 
+   customer_name
+FROM customers
+WHERE city IS NULL;
